@@ -1,0 +1,37 @@
+<div class="test">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="c">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" />
+      <div
+        *ngIf="
+          registerForm.get('name')?.invalid && registerForm.get('name')?.touched
+        "
+      >
+        Name is required!
+      </div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" />
+      <div
+        *ngIf="
+          registerForm.get('email')?.invalid &&
+          registerForm.get('email')?.touched
+        "
+      >
+        Enter a valid email!
+      </div>
+      <label for="password">password</label>
+      <input id="password" formControlName="password" />
+      <div
+        *ngIf="
+          registerForm.get('password')?.invalid &&
+          registerForm.get('password')?.touched
+        "
+      >
+        Password is required! (min. 6 characters).
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </div>
+  </form>
+</div>
