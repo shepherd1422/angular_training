@@ -8,7 +8,13 @@
 
 <app-header></app-header>
 
+<router-outlet></router-outlet>
+
+<button class="slider__pagination-btn" *ngFor="let item of newPages" >{{item}}</button>
+
 <!-- Slider Area -->
+ <!-- <button class="is__show-man" (click)="isShowMan = !isShowMan" >MAGIC</button> -->
+ <!-- *ngIf="isShowMan"  -->
 <section class="slider">
   <div class="hero-slider">
     <!-- Start Single Slider -->
@@ -458,4 +464,3 @@
   </div>
 </section>
 <app-footer-med></app-footer-med>
-<router-outlet></router-outlet>

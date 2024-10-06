@@ -1,4 +1,12 @@
-.test {
+.users__block-decor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.users__decor {
     width: 200px;
     height: 200px;
+    border: 1px solid #000;
+    margin: 5px;
 }

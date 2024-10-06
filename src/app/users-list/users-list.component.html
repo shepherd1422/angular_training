@@ -1,4 +1,18 @@
-<h2>Users list</h2>
-<ul class="test">
-    <li *ngFor="let user of userApiService.usersSubject| async" ></li>
-</ul>
+Users list
+<div class="users__block-decor">
+  <div class="users__decor" *ngFor="let person of users">
+    <p>
+      {{ $any(person).name }}
+    </p>
+    <p>
+      {{ $any(person).email }}
+    </p>
+    <p>
+      {{ $any(person).website }}
+    </p>
+    <p>
+      {{ $any(person).company.name  }}
+    </p>
+    <button (click)="deleteUser(person.id)" >delete</button>
+  </div>
+</div>
