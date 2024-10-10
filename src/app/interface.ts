@@ -21,3 +21,10 @@ export interface User {
     bs?: string;
   };
 }
+
+export interface UserForm {
+  name: string;
+  email: string;
+  website: string;
+  companyName: string;
+}

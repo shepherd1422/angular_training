@@ -1,4 +1,8 @@
-<h2>Users list</h2>
-<ul class="test">
-    <li *ngFor="let user of userApiService.usersSubject| async" ></li>
-</ul>
+<app-user-form (createUser)="createUser($event)" ></app-user-form>
+
+<div class="users__block-decor">
+  <div class="users__decor" *ngFor="let user of userService.usersSubject| async">
+    
+    <app-user-card [user]="user" (deleteUser)="deleteUser($event)"></app-user-card>
+  </div>
+</div>
