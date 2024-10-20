@@ -1,0 +1,14 @@
+.example_card {
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

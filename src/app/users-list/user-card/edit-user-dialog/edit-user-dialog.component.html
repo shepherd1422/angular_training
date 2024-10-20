@@ -1,0 +1,34 @@
+<form class="form" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Enter name</mat-label>
+    <input formControlName="name" matInput />
+    <mat-error>НАЗВАНИЕ ВВЕДЕНО НЕПРАВИЛНО</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>email:</mat-label>
+    <input formControlName="email" matInput />
+    <mat-error>EMAIL ВВЕДЕНО НЕПРАВИЛНО</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Does website exist?</mat-label>
+    <input formControlName="website" matInput />
+    <mat-error>НАЗВАНИЕ ВВЕДЕНО НЕПРАВИЛНО</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Enter company name:</mat-label>
+    <input formControlName="companyName" matInput />
+    <mat-error>НАЗВАНИЕ ВВЕДЕНО НЕПРАВИЛНО</mat-error>
+  </mat-form-field>
+  <button
+    type="submit"
+    (click)="(updatedUser)"
+    [mat-dialog-close]="updatedUser"
+    [disabled]="form.invalid"
+    mat-button
+  >
+    edit User
+  </button>
+</form>
