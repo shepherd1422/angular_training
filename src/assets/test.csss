@@ -1,0 +1,5 @@
+.wrpaer {
+    display: flex;
+    padding-block: 20px 30px;
+    
+}
