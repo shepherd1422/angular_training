@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Input</mat-label>
+    <input formControlName="name" matInput>
+    <mat-error *ngIf="form.value.name">invlid name</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input formControlName="email" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Does website exist?</mat-label>
+    <input formControlName="website" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>companyName</mat-label>
+    <input formControlName="companyName" matInput>
+  </mat-form-field>
+    <button type="submit" (click)="updatedUser" [mat-dialog-close]="updatedUser" [disabled]="form.invalid" mat-button>edit
+      User</button>
+</form>

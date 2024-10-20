@@ -1,15 +1,20 @@
-<div class="users__decor" >
-  <p>
-    {{ user.name }}
-  </p>
-  <p>
-    {{ user.email }}
-  </p>
-  <p>
-    {{ user.website }}
-  </p>
-  <p>
-    {{ user.company.name }}
-  </p>
-  <button (click)="onDeleteUser(user.id)">delete</button>
-</div>
+<mat-card class="example_card" appearance="outlined">
+  <mat-card-content>
+    <p>
+      {{ user.name }}
+    </p>
+    <p>
+      {{ user.email }}
+    </p>
+    <p>
+      {{ user.website }}
+    </p>
+    <p>
+      {{ user.company.name }}
+    </p>
+    <div class="button_wrapper">
+      <button (click)="onDeleteUser(user.id)" mat-raised-button>delete</button>
+      <button (click)="openDialog()" mat-raised-button>editTest</button>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -14,17 +14,18 @@ export interface User {
     };
   };
   phone?: string;
-  website?: string;
+  website?: boolean;
   company: {
     name: string;
     catchPhrase?: string;
     bs?: string;
   };
+  companyName: string;
 }
 
 export interface UserForm {
   name: string;
   email: string;
-  website: string;
+  website: boolean;
   companyName: string;
 }

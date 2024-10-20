@@ -9,7 +9,14 @@ export class UserService {
   public usersSubject = new BehaviorSubject<User[]>([]);
 
   setUsers(users: User[]) {
-    this.usersSubject.next(users)
+    this.usersSubject.next(users.slice(0, 4))
+  }
+
+  editUser(editedUser: User) {
+    this.usersSubject.next(
+      this.usersSubject.value.map((user) => 
+      user.id === editedUser.id ? editedUser : user)
+    )
   }
 
   createUser(user: User) {

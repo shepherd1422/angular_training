@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SenderComponentComponent } from './sender-component/sender-component.component';
-import { RecieverComponentComponent } from './reciever-component/reciever-component.component';
-import { RegisterComponent } from './register/register.component';
-import { HeaderComponent } from './header-med/header.component';
-import { FooterMedComponent } from './footer-med/footer-med.component';
+import { SenderComponentComponent } from '../assets/other_logic-training_stuff/sender-component/sender-component.component';
+import { RecieverComponentComponent } from '../assets/other_logic-training_stuff/reciever-component/reciever-component.component';
+import { RegisterComponent } from '../assets/other_logic-training_stuff/register/register.component';
+import { HeaderComponent } from '../assets/header-med/header.component';
+import { FooterMedComponent } from '../assets/footer-med/footer-med.component';
 import { NgFor, NgIf } from '@angular/common';
 import { UsersListComponent } from './users-list/users-list.component';
+
 
 const newPages = [5, 4, 3, 2, 1];
 
@@ -22,7 +23,7 @@ const newPages = [5, 4, 3, 2, 1];
     HeaderComponent,
     RecieverComponentComponent,
     RegisterComponent,
-    UsersListComponent
+    UsersListComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
